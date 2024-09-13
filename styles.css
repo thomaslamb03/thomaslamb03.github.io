@@ -1,0 +1,618 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Styling */
+footer {
+    background-color: lightgrey; /* Light background for the footer */
+    padding: 20px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows columns to stack on smaller screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Styling */
+footer section {
+    flex: 1;
+    min-width: 200px; /* Ensures columns don't get too narrow */
+    margin: 0 10px;
+}
+
+footer h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #000;
+}
+
+/* Header Styling */
+header {
+    background-color: #1a1a1a; /* Dark background */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* Navigation Container Styling */
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo Styling */
+header > nav > div:first-of-type {
+    flex: 0 0 auto; /* Ensures logo does not grow */
+}
+
+header > nav > div:first-of-type a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+header > nav > div:first-of-type a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Search Bar Container */
+nav > form {
+    display: flex;
+    align-items: center; /* Align items vertically within the container */
+    max-width: 700px; /* Adjust as needed */
+    margin: 0 20px; /* Adds space on both sides of the search bar */
+    position: relative; /* Allows for relative positioning of child elements */
+    flex-grow: 1; /* Makes the form grow within the available space */
+}
+
+/* Search Input Field */
+nav > form > input[type="text"] {
+    flex: 1; /* Makes the input field take up available space */
+    padding: 10px;
+    font-size: 16px;
+    border: 0px solid #ccc; /* Light border for better appearance */
+    border-radius: 3px 0 0 3px;
+    outline: none;
+    height: 40px; /* Set a consistent height */
+    box-sizing: border-box; /* Ensures padding and border are included in the height */
+    margin: 0; /* Removes any default margin */
+    border-right: none; /* Removes the right border to avoid double borders with button */
+}
+
+/* Search Button */
+nav > form > button {
+    padding: 0 15px; /* Adjust padding to fit the button */
+    background-color: #333;
+    border: 0px solid #ccc; /* Matches the border of the input field */
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+    color: white;
+    height: 40px; /* Match the height of the input field */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Ensures padding and border are included in the height */
+    margin: 0; /* Removes any default margin */
+    border-left: none; /* Removes the left border to avoid double borders with input field */
+}
+
+
+/* Navigation Menu Styling */
+nav > ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 0 0 auto; /* Ensures the menu does not grow */
+}
+
+nav > ul > li {
+    margin-left: 20px;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav > ul > li > a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Main Article Styling */
+main {
+    padding: 20px;
+    background-color: whitesmoke; /* Light grey background for the main content */
+}
+
+/* Article Styling */
+article {
+    max-width: 1200px; /* Keeps the article width consistent */
+    margin: 0 auto; /* Centers the article */
+    padding: 0 20px; /* Adds horizontal padding */
+}
+
+/* Main Article Title Styling */
+article > h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    padding-bottom: 10px;
+    margin-top: 20px; /* Adds space from top */
+}
+
+/* Movie Detail Item Styling */
+.movie-details > p {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    font-size: 16px;
+    color: #555; /* Slightly lighter color for readability */
+    margin: 0;
+}
+
+/* Label Styling */
+.movie-details > p > .label {
+    font-weight: bold;
+    margin-right: 10px; /* Space between label and value */
+    color: #333; /* Darker color for emphasis */
+    white-space: nowrap; /* Prevents label from wrapping */
+}
+
+/* Movie Details Container */
+.movie-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between the items */
+    margin-bottom: 20px;
+    justify-content: space-between; /* Distributes items evenly */
+}
+
+/* Figure Styling */
+figure {
+    margin: 0;
+    text-align: center; /* Centers the content inside the figure */
+}
+
+figure > img {
+    width: 100%; /* Ensures the image spans the full width of the container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    display: block; /* Removes any extra space below the image */
+}
+
+figure > figcaption {
+    font-size: 14px; /* Adjust font size as needed */
+    color: #666; /* Gray color for the caption text */
+    margin-top: 5px; /* Space between the image and the caption */
+}
+
+/* Changes the Background Colour */
+main {
+    background-color: whitesmoke; /* Light grey background */
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+/* Trending Section Styling */
+.trending {
+    margin-top: 0px; /* Adjust this value as needed to create space above the section */
+    margin-bottom: 15px;
+    max-width: 1200px; /* Ensures the section aligns with other content */
+    margin-left: auto;
+    margin-right: auto; /* Centers the section */
+    padding: 0 20px; /* Optional: Add padding to match other sections */
+}
+
+.trending > h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #333; /* Adds a line under the title */
+    padding-bottom: 10px; /* Adds space between the title and the border */
+
+}
+
+/* User Rating Section Styling */
+.user-rating-section {
+    margin-top: 0px;
+    padding: 20px;
+    background-color: whitesmoke; /* Light background */
+    max-width: 1200px; /* Adjusted max-width */
+    margin-left: auto;
+    margin-right: auto; /* Center the section */
+    text-align: center; /* Center-align text */
+}
+
+/* Section Title Styling */
+.user-rating-section > h2 {
+    font-size: 24px; /* Font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+    color: #333; /* Dark text color */
+    font-weight: 600; /* Slightly bold */
+    text-align: left;
+}
+
+/* Form Styling */
+.user-rating-form {
+    display: flex;
+    flex-wrap: wrap; /* Wrap elements to next line if needed */
+    gap: 15px; /* Space between form elements */
+    justify-content: center; /* Center align form elements */
+}
+
+.user-rating-form .form-group {
+    flex: 1 1 200px; /* Flex-grow: 1, Flex-shrink: 1, Min-width: 200px */
+    display: flex;
+    flex-direction: column;
+}
+
+.user-rating-form .form-group > input,
+.user-rating-form .form-group > select {
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Placeholder Styling */
+.user-rating-form .form-group > input::placeholder,
+.user-rating-form .form-group > select::placeholder {
+    color: #aaa; /* Light gray color for placeholder text */
+}
+
+/* Input Focus Styling */
+.user-rating-form .form-group > input:focus,
+.user-rating-form .form-group > select:focus {
+    border-color: #333; /* Blue border on focus */
+}
+
+/* Button Styling */
+.user-rating-form button {
+    padding: 12px 24px;
+    background-color: #333; /* Blue background color */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.user-rating-form button:hover {
+    background-color: #555; 
+}
+
+/* Social Media Ribbon Styling */
+aside {
+    position: absolute; /* Positions the ribbon relative to the nearest positioned parent */
+    top: 90px; /* Adjust this value to be just below your logo */
+    left: 0px; /* Aligns it to the left side */
+    z-index: 1000; /* Keeps it on top of other content */
+}
+
+aside > nav {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    gap: 15px; /* Space between each icon */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 0 5px 5px 0; /* Rounded edges on the right side */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+aside > nav > a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+aside > nav > a:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    opacity: 0.8; /* Slight transparency on hover */
+}
+
+aside > nav > a > img {
+    width: 100%; /* Make images fill the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Removes extra space around the image */
+    border-radius: 50%; /* Rounded icons */
+}
+
+/* External Reviews Section Styling */
+.reviews {
+    margin-top: 0px;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reviews > h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.review {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.review-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.review-date {
+    font-size: 12px;
+    color: #777;
+}
+
+.review-rating {
+    font-size: 14px;
+    color: #555;
+}
+
+.review-content {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.review-vote {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.review-vote > button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    margin-left: 5px;
+    transition: color 0.3s;
+}
+
+.review-vote > button:hover {
+    color: #000;
+}
+
+/* Optional Review Section Styling */
+.optional-review {
+    margin-top: 0px;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.review-form {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+}
+
+.review-form > input {
+    flex: 1; /* Makes the input field take up available space */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #555;
+    border-radius: 3px;
+    outline: none;
+}
+
+.review-form > button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.review-form > button:hover {
+    background-color: #555;
+}
+
+/* Ways to Watch Section Styling */
+
+/* Container for title and icons */
+.watch-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    justify-content: center;
+    gap: 20px; /* Space between title and icons */
+}
+
+.ways-to-watch h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0; /* Remove margin to align with icons */
+}
+
+.watch-icons {
+    display: flex;
+    flex-wrap: wrap; /* Allows icons to wrap to the next line */
+    gap: 20px; /* Space between icons */
+}
+
+.icon-link {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: left;
+    flex-direction: row;
+    transition: color 0.3s;
+}
+
+.icon-link:hover {
+    color: #000; /* Change color on hover if needed */
+}
+
+.icon-link img {
+    width: 50px; /* Adjust size of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px;
+}
+
+.icon-link span {
+    font-size: 14px;
+}
+
+/* Film Synopsis Section Styling */
+.film-synopsis {
+    margin: 0px auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    max-width: 1200px;
+    text-align: center; /* Center the contents horizontally */
+}
+
+.synopsis-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+    gap: 20px; /* Space between the button and the text */
+}
+
+.synopsis-text {
+    font-family: 'Georgia', serif; /* Use the chosen web-safe font */
+    font-size: 18px; /* Slightly larger font size for readability */
+    line-height: 1.6; /* Improved line spacing */
+    color: #333;
+    max-width: 800px; /* Limit text width for readability */
+    margin: 0 auto; /* Center the text block */
+}
+
+.trailer-button {
+    padding: 10px 20px;
+    background-color: #ffcc00; /* Yellow background */
+    color: #333;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.trailer-button:hover {
+    background-color: #e6b800; /* Darker yellow on hover */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block; /* Adjust to fit your layout */
+}
+
+.image-container img {
+    display: block; /* Removes bottom space */
+    width: 100%; /* Adjust as needed */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.next-page-container {
+    text-align: center; /* Centers the button horizontally */
+    margin-top: 0px; /* Space above the button */
+}
+
+.next-page-button {
+    background-color: #555; /* Button color */
+    color: white;
+    padding: 12px 24px; /* Adjust the padding as needed */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.next-page-button:hover {
+    background-color: #333; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
